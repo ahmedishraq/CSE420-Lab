@@ -19,27 +19,39 @@ public class Lab1 {
 
     // Identifier searching method 
     public static void searchIdentifiers() {
-        try{
+        try {
             File input_file = new File("input.txt");
             Scanner sc = new Scanner(input_file);
-            while(sc.hasNextLine()){
+            while (sc.hasNextLine()) {
                 String s = sc.next();
-                if(s.equals("int") || s.equals("float") || s.equals("double") || s.equals("boolean") || s.equals("string") || s.equals("char")){
+                if (s.equals("int") || s.equals("float") || s.equals("double") || s.equals("boolean") || s.equals("string") || s.equals("char")) {
                     String tmp = sc.nextLine();
-                    if(tmp.contains("=")){
+                    if (tmp.contains("=")) {
                         int i = tmp.indexOf("=");
-                        identifiers.add(tmp.substring(0,i));
-                    }
-                    else{
+                        identifiers.add(tmp.substring(0, i));
+                    } else {
                         int i = tmp.indexOf(";");
-                        identifiers.add(tmp.substring(0,i));
+                        identifiers.add(tmp.substring(0, i));
                     }
                 }
             }
+        } catch (Exception e) {
+
         }
-        catch (Exception e){
-            
+    }
+
+    // keywords searching method 
+    public static void searhKeyword() {
+        try {
+            File input_file = new File("input.txt");
+            Scanner sc = new Scanner(input_file);
+            while(sc.hasNextLine()){
+                
+            }
+        } catch (Exception e) {
+
         }
+
     }
 
     public static void main(String[] args) {
