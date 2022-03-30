@@ -14,7 +14,7 @@ public class Lab1 {
     static LinkedList<Object> identifiers = new LinkedList<Object>();
     static LinkedList<Object> math_Operators = new LinkedList<Object>();
     static LinkedList<Object> logical_Operators = new LinkedList<Object>();
-    static LinkedList<Object> numerical_values = new LinkedList<Object>();
+    static LinkedList<Object> numerical_Values = new LinkedList<Object>();
     static LinkedList<Object> others = new LinkedList<Object>();
 
     // Identifier searching method 
@@ -193,6 +193,23 @@ public class Lab1 {
                     }
                 }
 
+            }
+        } catch (Exception e) {
+
+        }
+    }
+        
+    // Numerical value searching method 
+        public static void searchNumericalValues() {
+        try {
+            File f = new File("lab01.txt");
+            Scanner k = new Scanner(f);
+            while (k.hasNext()) {
+                String s = k.next();
+                s = s.replaceAll("[^0.0-9.0]", ""); //replaced with space.
+                if (s != null && !s.isEmpty()) {
+                    numerical_Values.add(s);
+                }
             }
         } catch (Exception e) {
 
