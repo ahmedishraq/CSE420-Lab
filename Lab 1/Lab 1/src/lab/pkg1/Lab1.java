@@ -41,7 +41,7 @@ public class Lab1 {
     }
 
     // keywords searching method 
-      public static void searchKeyword() {
+    public static void searchKeyword() {
         try {
             File f = new File("lab01.txt");
             Scanner k = new Scanner(f);
@@ -86,9 +86,9 @@ public class Lab1 {
 
         }
     }
-      
+
     // Math operator searching method 
-         public static void searchMathOperators() {
+    public static void searchMathOperators() {
         try {
             File f = new File("lab01.txt");
             Scanner k = new Scanner(f);
@@ -115,7 +115,7 @@ public class Lab1 {
                         math_Operators.add("=");
                     }
                 }
-                
+
                 if (s.contains("*")) {
                     if (math_Operators.contains("*")) {
 
@@ -142,9 +142,9 @@ public class Lab1 {
 
         }
     }
-    
+
     // Logival operator searching method 
-        public static void searchLogicalOperators() {
+    public static void searchLogicalOperators() {
         try {
             File f = new File("lab01.txt");
             Scanner k = new Scanner(f);
@@ -198,9 +198,9 @@ public class Lab1 {
 
         }
     }
-        
+
     // Numerical value searching method 
-        public static void searchNumericalValues() {
+    public static void searchNumericalValues() {
         try {
             File f = new File("lab01.txt");
             Scanner k = new Scanner(f);
@@ -215,9 +215,9 @@ public class Lab1 {
 
         }
     }
-        
+
     // others searching method 
-        public static void searchOthers() {
+    public static void searchOthers() {
         try {
             File f = new File("lab01.txt");
             Scanner k = new Scanner(f);
@@ -263,21 +263,22 @@ public class Lab1 {
 
         }
     }
-        
+
     // print result method 
-        public static void printAll(String s, LinkedList < Object > l) {
+    public static void printAll(String s, LinkedList< Object> l) {
         System.out.print(s + " : ");
         for (int c = 0; c < l.size(); c++) {
             System.out.print(l.get(c));
-            if (c == l.size() - 1) {} else {
+            if (c == l.size() - 1) {
+            } else {
                 System.out.print(",");
             }
         }
         System.out.println();
     }
-         
+
     public static void main(String[] args) {
-                try {
+        try {
             searchKeyword();
             printAll("Keywords", keywords);
 
