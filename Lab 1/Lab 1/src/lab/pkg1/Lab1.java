@@ -12,7 +12,7 @@ public class Lab1 {
 
     static LinkedList<Object> keywords = new LinkedList<Object>();
     static LinkedList<Object> identifiers = new LinkedList<Object>();
-    static LinkedList<Object> math_operators = new LinkedList<Object>();
+    static LinkedList<Object> math_Operators = new LinkedList<Object>();
     static LinkedList<Object> logical_operators = new LinkedList<Object>();
     static LinkedList<Object> numerical_values = new LinkedList<Object>();
     static LinkedList<Object> others = new LinkedList<Object>();
@@ -41,17 +41,106 @@ public class Lab1 {
     }
 
     // keywords searching method 
-    public static void searhKeyword() {
+      public static void searchKeyword() {
         try {
-            File input_file = new File("input.txt");
-            Scanner sc = new Scanner(input_file);
-            while(sc.hasNextLine()){
-                
+            File f = new File("lab01.txt");
+            Scanner k = new Scanner(f);
+            while (k.hasNextLine()) {
+                String s = k.nextLine();
+                if (s.startsWith("int") && s.contains("int")) {
+                    keywords.add("int");
+                }
+                if (s.startsWith("float") && s.contains("float")) {
+                    keywords.add("float");
+                }
+                if (s.startsWith("double") && s.contains("double")) {
+                    keywords.add("double");
+                }
+                if (s.startsWith("String") && s.contains("String")) {
+                    keywords.add("String");
+                }
+                if (s.startsWith("boolean") && s.contains("boolean")) {
+                    keywords.add("boolean");
+                }
+                if (s.startsWith("char") && s.contains("char")) {
+                    keywords.add("char");
+                }
+                if (s.startsWith("else") && s.contains("else")) {
+                    keywords.add("else");
+                }
+                if (s.startsWith("if") && s.contains("if")) {
+                    keywords.add("if");
+                }
+                if (s.startsWith("for") && s.contains("for")) {
+                    keywords.add("for");
+                }
+                if (s.startsWith("while") && s.contains("while")) {
+                    keywords.add("while");
+                }
+                if (s.startsWith("do") && s.contains("do")) {
+                    keywords.add("do");
+                }
+
             }
         } catch (Exception e) {
 
         }
+    }
+      
+    // Math operator searching method 
+         public static void searchMathOperators() {
+        try {
+            File f = new File("lab01.txt");
+            Scanner k = new Scanner(f);
+            while (k.hasNextLine()) {
+                String s = k.nextLine();
+                if (s.contains("+")) {
+                    if (math_Operators.contains("+")) {
 
+                    } else {
+                        math_Operators.add("+");
+                    }
+                }
+                if (s.contains("-")) {
+                    if (math_Operators.contains("-")) {
+
+                    } else {
+                        math_Operators.add("-");
+                    }
+                }
+                if (s.contains("=")) {
+                    if (math_Operators.contains("=")) {
+
+                    } else {
+                        math_Operators.add("=");
+                    }
+                }
+                
+                if (s.contains("*")) {
+                    if (math_Operators.contains("*")) {
+
+                    } else {
+                        math_Operators.add("*");
+                    }
+                }
+                if (s.contains("/")) {
+                    if (math_Operators.contains("/")) {
+
+                    } else {
+                        math_Operators.add("/");
+                    }
+                }
+                if (s.contains("%")) {
+                    if (math_Operators.contains("%")) {
+
+                    } else {
+                        math_Operators.add("%");
+                    }
+                }
+            }
+        } catch (Exception e) {
+
+        }
     }
 
     public static void main(String[] args) {
