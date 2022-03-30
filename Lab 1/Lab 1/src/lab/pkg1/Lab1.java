@@ -215,6 +215,54 @@ public class Lab1 {
 
         }
     }
+        
+    // others searching method 
+        public static void searchOthers() {
+        try {
+            File f = new File("lab01.txt");
+            Scanner k = new Scanner(f);
+            while (k.hasNextLine()) {
+                String s = k.nextLine();
+                if (s.contains(",")) {
+                    if (others.contains(",")) {
+
+                    } else {
+                        others.add(",");
+                    }
+                }
+                if (s.contains(";")) {
+                    if (others.contains(";")) {
+
+                    } else {
+                        others.add(";");
+                    }
+                }
+                if (s.contains("(")) {
+                    if (others.contains("()")) {
+
+                    } else {
+                        others.add("()");
+                    }
+                }
+                if (s.contains("{")) {
+                    if (others.contains("{}")) {
+
+                    } else {
+                        others.add("{}");
+                    }
+                }
+                if (s.contains("[")) {
+                    if (others.contains("[]")) {
+
+                    } else {
+                        others.add("[]");
+                    }
+                }
+            }
+        } catch (Exception e) {
+
+        }
+    }
          
     public static void main(String[] args) {
 
