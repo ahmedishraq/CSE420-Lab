@@ -263,6 +263,18 @@ public class Lab1 {
 
         }
     }
+        
+    // print result method 
+        public static void printAll(String s, LinkedList < Object > l) {
+        System.out.print(s + " : ");
+        for (int c = 0; c < l.size(); c++) {
+            System.out.print(l.get(c));
+            if (c == l.size() - 1) {} else {
+                System.out.print(",");
+            }
+        }
+        System.out.println();
+    }
          
     public static void main(String[] args) {
 
