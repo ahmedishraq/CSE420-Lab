@@ -13,7 +13,7 @@ public class Lab1 {
     static LinkedList<Object> keywords = new LinkedList<Object>();
     static LinkedList<Object> identifiers = new LinkedList<Object>();
     static LinkedList<Object> math_Operators = new LinkedList<Object>();
-    static LinkedList<Object> logical_operators = new LinkedList<Object>();
+    static LinkedList<Object> logical_Operators = new LinkedList<Object>();
     static LinkedList<Object> numerical_values = new LinkedList<Object>();
     static LinkedList<Object> others = new LinkedList<Object>();
 
@@ -142,7 +142,63 @@ public class Lab1 {
 
         }
     }
+    
+    // Logival operator searching method 
+        public static void searchLogicalOperators() {
+        try {
+            File f = new File("lab01.txt");
+            Scanner k = new Scanner(f);
+            while (k.hasNextLine()) {
+                String s = k.nextLine();
+                if (s.contains("<")) {
+                    if (logical_Operators.contains("<")) {
 
+                    } else {
+                        logical_Operators.add("<");
+                    }
+                }
+                if (s.contains(">")) {
+                    if (logical_Operators.contains(">")) {
+
+                    } else {
+                        logical_Operators.add(">");
+                    }
+                }
+                if (s.contains("==")) {
+                    if (logical_Operators.contains("==")) {
+
+                    } else {
+                        logical_Operators.add("==");
+                    }
+                }
+                if (s.contains(">=")) {
+                    if (logical_Operators.contains(">=")) {
+
+                    } else {
+                        logical_Operators.add(">=");
+                    }
+                }
+                if (s.contains("<=")) {
+                    if (logical_Operators.contains("<=")) {
+
+                    } else {
+                        logical_Operators.add("<=");
+                    }
+                }
+                if (s.contains("!=")) {
+                    if (logical_Operators.contains("!=")) {
+
+                    } else {
+                        logical_Operators.add("!=");
+                    }
+                }
+
+            }
+        } catch (Exception e) {
+
+        }
+    }
+         
     public static void main(String[] args) {
 
     }
