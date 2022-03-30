@@ -277,7 +277,29 @@ public class Lab1 {
     }
          
     public static void main(String[] args) {
+                try {
+            searchKeyword();
+            printAll("Keywords", keywords);
 
+            searchIdentifiers();
+            printAll("Identifiers", identifiers);
+
+            searchMathOperators();
+            printAll("Math Operators", math_Operators);
+
+            searchLogicalOperators();
+            printAll("Logical Operators", logical_Operators);
+
+            searchNumericalValues();
+            printAll("Numerical Values", numerical_Values);
+
+            searchOthers();
+            printAll("Others", others);
+
+        } catch (Exception e) {
+
+            System.out.println(e.toString());
+        }
     }
 
 }
