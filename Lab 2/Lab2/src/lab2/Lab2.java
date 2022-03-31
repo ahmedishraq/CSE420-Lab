@@ -16,6 +16,49 @@ public class Lab2 {
         }
     }
     
+    public static boolean char_check(char ch){
+        int ascii = (int) ch;
+        if(ascii >= 97 && ascii <= 122){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public static boolean domain_check(String str){
+        boolean out = false;
+        if(str.contains(".") == true){
+            for(int i=0;i<str.length();i++){
+                char c = str.charAt(i);
+                if((char_check(c) == true) || c == '.'){
+                    out = true;
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+        return out;
+    }
+    
+    public static boolean email_check(String str){
+        boolean out = false;
+        boolean out1 = false;
+        char start = str.charAt(0);
+        if((str.contains("@")) == true && char_check(start) == true){
+            String [] split = str.split("@");
+            if(split.length>2){
+                return false;
+            }
+            String first_part = split[0];
+            for(int i=0;i<first_part.length();i++){
+                char c = first_part.charAt(i);
+                if((char_check(c) == true || (number_check(c) == true) || c == '.' || c == '-'))
+            }
+        }
+    }
+    
     public static void main(String[] args) {
     }
     
