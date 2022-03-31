@@ -4,6 +4,8 @@ package lab2;
  *
  * @author ahmed_ishraq
  */
+import java.util.*;
+
 public class Lab2 {
 
     public static boolean number_check(char ch){
@@ -54,12 +56,38 @@ public class Lab2 {
             String first_part = split[0];
             for(int i=0;i<first_part.length();i++){
                 char c = first_part.charAt(i);
-                if((char_check(c) == true || (number_check(c) == true) || c == '.' || c == '-'))
+                if((char_check(c) == true || (number_check(c) == true) || c == '.' || c == '-')){
+                    out1 = true;
+                }
+                else{
+                    return false;
+                }
+            }
+            boolean out2 = domain_check(split[1]);
+            if(out1 == true && out2 == true){
+                out = true;
             }
         }
+        return out;
     }
     
     public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int a = sc.nextInt();
+        String email = "Email";
+        String web = "Web";
+        String [] input = new String [a];
+        sc.nextLine();
+        for(int i=0;i<a;i++){
+            if(email_check(input[i]) == true){
+                email = email + ", "+(i+1);
+            }
+            if(domain_check(input[i]) == true){
+                web = web+", "+(i+1);
+            }
+        }
+        System.out.println(email);
+        System.out.println(web);
     }
     
 }
