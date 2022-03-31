@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package lab2;
 
 /**
@@ -11,11 +6,17 @@ package lab2;
  */
 public class Lab2 {
 
-    /**
-     * @param args the command line arguments
-     */
+    public static boolean number_check(char ch){
+        int ascii = (int) ch;
+        if(ascii >= 48 && ascii <= 57){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
     public static void main(String[] args) {
-        // TODO code application logic here
     }
     
 }
