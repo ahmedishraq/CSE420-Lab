@@ -72,6 +72,8 @@ public class Lab2 {
     }
     
     public static void main(String[] args) {
+        int email_count = 0;
+        int web_count = 0;
         Scanner sc = new Scanner (System.in);
         int a = sc.nextInt();
         String email = "Email";
@@ -79,15 +81,30 @@ public class Lab2 {
         String [] input = new String [a];
         sc.nextLine();
         for(int i=0;i<a;i++){
+            input[i] = sc.nextLine();
+        }
+        for(int i=0;i<a;i++){
             if(email_check(input[i]) == true){
                 email = email + ", "+(i+1);
+                email_count++;
             }
             if(domain_check(input[i]) == true){
                 web = web+", "+(i+1);
+                web_count++;
             }
         }
-        System.out.println(email);
-        System.out.println(web);
+        if(email_count == 0){
+            System.out.println("Email, 0");
+        }
+        else{
+            System.out.println(email);
+        }
+        if(web_count == 0){
+            System.out.println("Web, 0");
+        }
+        else{
+            System.out.println(web);    
+        }
     }
     
 }
