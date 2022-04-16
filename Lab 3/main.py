@@ -20,9 +20,9 @@ for i in range(len(exmpl)):
 	not_matched = 0
 	for j in range(len(regex)):
 		if(regex[j].match(exmpl[i])):
-			print("YES, {j+1}")
+			print(f"YES, {j+1}")
 			break
 		else:
 			not_matched += 1
 	if(not_matched == reg_count):
-			print("NO, 0")
+			print(f"NO, 0")
