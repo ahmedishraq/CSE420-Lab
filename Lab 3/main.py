@@ -9,7 +9,7 @@ for i in range(0,reg_count):
 print(regex)
 
 exmpl = []
-exmpl_count = int(intput("Number of inputs for example: "))
+exmpl_count = int(input("Number of inputs for example: "))
 for i in range(0,exmpl_count):
 	sol2 = input()
 
