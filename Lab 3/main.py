@@ -1,5 +1,5 @@
 import re
-file_name = input("Write ethe file name among the below two file name: \n1. Input1.txt \n2. Input2.txt \n")
+file_name = input("Write ethe file name among the below two file name: \n1. testing1.txt \n2. testing2.txt \n")
 
 try:
 	file = open(file_name)
