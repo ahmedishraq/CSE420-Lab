@@ -1,33 +1,18 @@
 import re
-file_name = input("Write ethe file name among the below two file name: \n1. testing1.txt \n2. testing2.txt \n")
 
-try:
-	file = open(file_name)
-except:
-	print("Wrong file name input")
+regex = []
+reg_count = int(input("Number of inputs for regex: "))
+for i in range(0,reg_count):
+	sol1 = re.compile(input())
 
-print("\n")
+	regex.append(sol1)
+print(regex)
 
-RegCount = int(file.readline())
-RegIndex = []
+exmpl = []
+exmpl_count = int(intput("Number of inputs for example: "))
+for i in range(0,exmpl_count):
+	sol2 = input()
 
-for i in range (int(RegCount)):
-	RegIndex.append(file.readline().rstrip())
+	exmpl.append(sol2)
+print(exmpl)
 
-InputCount = int(file.readline())
-InputIndex = []
-
-for i in range (int(InputCount))
-InputIndex.append(file.readline().rstrip())
-
-c = false
-for i in range (InputCount):
-	for r in range (Rcount):
-		if re.compile(RegIndex[r]).search(InputIndex[i]):
-			print("YES,", r+1)
-			c = True
-			break
-		else:
-			c = False
-		if t == False:
-			Print("NO, 0")
